@@ -15,16 +15,12 @@ def enviar_tweet(texto):
     tweeet = api.create_tweet(text=texto)
     print(tweeet)
 
-# Loop principal
 while True:
     now = datetime.now()
     if now.hour == 7 and now.minute == 0:
-        # Chame a função enviar_tweet com o texto que você deseja postar
         enviar_tweet(mensagem)
         print("Tweet enviado.")
-        # Espere 24 horas antes de enviar o próximo tweet
         time.sleep(24 * 60 * 60)
     else:
-        # Aguarde 60 segundos antes de verificar a hora novamente
         time.sleep(60)
 
