@@ -17,7 +17,7 @@ def enviar_tweet(texto):
 
 while True:
     now = datetime.now()
-    if now.hour == 7 and now.minute == 0:
+    if now.hour == 7 and now.minute == 10:
         enviar_tweet(mensagem)
         print("Tweet enviado.")
         time.sleep(24 * 60 * 60)
